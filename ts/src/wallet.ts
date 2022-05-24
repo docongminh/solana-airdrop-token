@@ -1,4 +1,4 @@
-import { Keypair } from '@solana/web3.js';
+import { Keypair, PublicKey } from '@solana/web3.js';
 import bs58 from 'bs58';
 import * as bip39 from 'bip39';
 import { derivePath } from 'ed25519-hd-key';
@@ -9,8 +9,16 @@ export class Wallet {
     this._wallet = wallet;
   }
 
+  get keyPair(): Keypair {
+    return this._wallet;
+  }
+
   get address(): string {
     return this._wallet.publicKey.toString();
+  }
+
+  get publicKey(): PublicKey {
+    return this._wallet.publicKey;
   }
 
   static newWallet(): Wallet {

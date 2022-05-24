@@ -12,8 +12,9 @@
   "author": "@minhdocs",
   "license": "ISC",
   "dependencies": {
-    "@solana/spl-token": "^0.2.0",
-    "@solana/web3.js": "^1.43.1",
+    "@ethersproject/units": "^5.6.0",
+    "@solana/spl-token": "^0.1.8",
+    "@solana/web3.js": "^1.31.0",
     "bip39": "^3.0.4",
     "bs58": "^5.0.0",
     "ed25519-hd-key": "^1.2.0"
